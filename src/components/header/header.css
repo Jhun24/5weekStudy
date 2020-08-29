@@ -1,0 +1,43 @@
+.header{
+    width:100vw;
+    height:60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #f48B00;
+}
+
+.header > h2{
+    margin-left:30px;
+    font-size:36px;
+    color:#fff;
+}
+
+.header > .button-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width:250px;
+    height:60px;
+}
+
+.header > .button-box > a > input{
+    width:100px;
+    height:30px;
+
+    border:2px solid #fff;
+    border-radius: 5px;
+    outline:none;
+    background-color: #f48B00;
+    color:#fff;
+    font-size:14px;
+    font-weight:800;
+}
+
+.header > .button-box > a > input:hover{
+    background-color: #fff;
+    color:#f48B00;
+}
