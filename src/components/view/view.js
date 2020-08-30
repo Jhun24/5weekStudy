@@ -22,11 +22,21 @@ class View extends Component{
         }
     }
 
+    getPostComponentUpdate = async (e)=>{
+        let getPostData = await api.getPost();
+        if(getPostData.status != 404){
+            this.setState({postData:getPostData.data})
+        
+        }
+    }
+
+ 
+
     render(){
         return(
             <div className="view-content">
                 {this.state.postData.map((data,i)=>{
-                    return(<PostComponent title={data.title} content={data.content} key={i}/>);
+                    return(<PostComponent getPostComponentUpdate={this.getPostComponentUpdate}id={data.id} title={data.title} content={data.content} key={i}/>);
                 })}
             </div>
         );
